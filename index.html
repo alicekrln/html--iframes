@@ -13,12 +13,7 @@
         padding: 0;
         font-family: monospace;
     }
-
-    iframe:nth-child(1) {}
-
-    iframe:nth-child(2) {}
 </style>
-
 <body>
     <section>
         <header>
@@ -26,17 +21,13 @@
         </header>
         <div class="container">
             <aside>
-                <nav>Sweden</nav>
-                <nav>Norway</nav>
-                <nav>Finland</nav>
-                <nav>Denmark</nav>
-                <!-- <a href>Sweden</a>
-                <a href="">Norway</a>
-                <a href="">Finland</a>
-                <a href="">Denmark</a> -->
+                <nav><a href="content.html?country=sweden" target="contentFrame">Sweden</a></nav>
+                <nav><a href="content.html?country=norway" target="contentFrame">Norway</a></nav>
+                <nav><a href="content.html?country=finland" target="contentFrame">Finland</a></nav>
+                <nav><a href="content.html?country=denmark" target="contentFrame">Denmark</a></nav>
             </aside>
             <article>
-                <iframe src="content.html" frameborder="0"></iframe>
+                <iframe name="contentFrame" src="content.html" frameborder="0"></iframe>
             </article>
         </div>
         <footer>        

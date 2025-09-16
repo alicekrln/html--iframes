@@ -4,14 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content</title>
+    <title>Countries</title>
 </head>
-
 <body>
-    <h1>Sweden</h1>
-    <p>Sweden has a population of 10 million</p>
-    <img src="https://historiskamedia.se/wp-content/uploads/2022/04/sv-flagga.jpg"
-    width="250px"/>
-</body>
+    <div id="contentContainer"></div>
 
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const country = params.get('country');
+
+        const container = document.getElementById('contentContainer');
+
+        switch(country) {
+            case 'sweden': 
+                container.innerHTML = `
+                <h2>Sweden</h2>
+                <p>Sweden has a population of 10 million.</p>
+                <img src="https://historiskamedia.se/wp-content/uploads/2022/04/sv-flagga.jpg"
+                width="250px"/>
+                `;
+                break;
+            case 'norway': 
+                container.innerHTML = `
+                <h2>Norway</h2>
+                <p>Norway has a population of 5,5 million.</p>
+                <img src="https://cdn.britannica.com/01/3101-050-1BB27B69/Flag-Norway.jpg"
+                width="250px"/>
+                `;
+                break;
+            case 'finland': 
+                container.innerHTML = `
+                <h2>Finland</h2>
+                <p>Finland has a population of 5,6 million.</p>
+                <img src="https://smapse.com/storage/2025/04/converted/895_0_smapse-finland-flag-1.jpg"
+                width="250px"/>
+                `;
+                break;
+            case 'denmark': 
+                container.innerHTML = `
+                <h2>Denmark</h2>
+                <p>Denmark has a population of 6 million.</p>
+                <img src="https://as2.ftcdn.net/v2/jpg/01/01/18/67/1000_F_101186793_Myz62HXoyWdr4rk09zCpjFItWpvoLckX.jpg"
+                width="250px"/>
+                `;
+                break;
+            default:
+                container.innerHTML = "<p>Select a country from the sidebar.</p>";
+        }
+    </script>
+</body>
 </html>
